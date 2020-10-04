@@ -3,6 +3,14 @@
 [![npm version](https://badge.fury.io/js/react-native-super-timepicker.svg)](//npmjs.com/package/react-native-super-timepicker) [![npm downloads](https://img.shields.io/npm/dm/react-native-super-timepicker.svg)
 ](//npmjs.com/package/react-native-super-timepicker)
 
+## Summary
+
+A 24-hour format time picker which improves on [react-native-24h-timepicker](https://www.npmjs.com/package/react-native-24h-timepicker) by:
+
+- supporting `minHour` and `maxHour` (contribution by [mindmind](https://github.com/mindmind))
+- putting a space gap between the number and the label (e.g. "24 mins" instead of "24mins")
+- removing deprecated stuff like `componentWillReceiveProps`
+
 ### Screenshot
 
 ![screenshot](https://user-images.githubusercontent.com/42978089/95019985-60a24e80-061d-11eb-9fad-fb9d437ca7b0.gif)
