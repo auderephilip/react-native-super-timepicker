@@ -97,25 +97,25 @@ export default Example;
 
 ## Props
 
-| Prop               | Type     | Description                                      | Default |
-| ------------------ | -------- | ------------------------------------------------ | ------- |
-| minHour            | number   | Minimum of hour                                  | 0       |
-| maxHour            | number   | Maximum of hour                                  | 23      |
-| minMinute          | number   | Minimum of minute                                | 0       |
-| maxMinute          | number   | Maximum of minute                                | 59      |
-| hourInterval       | number   | The interval at which hours can be selected.     | 1       |
-| minuteInterval     | number   | The interval at which minutes can be selected.   | 1       |
-| hourUnit           | string   | Add extra text to hour                           | ""      |
-| hourUnitSingular   | string   | The first hour's extra text, if not hourUnit     | ""      |
-| minuteUnit         | string   | Add extra text to minute                         | ""      |
-| minuteUnitSingular | string   | The first minute's extra text, if not minuteUnit | ""      |
-| selectedHour       | string   | Default hour                                     | "0"     |
-| selectedMinute     | string   | Default minute                                   | "00"    |
-| itemStyle          | object   | Item text style                                  | {}      |
-| textCancel         | string   | Cancel button text                               | Cancel  |
-| textConfirm        | string   | Confirm button text                              | Confirm |
-| onCancel           | function | Event on Cancel button                           |         |
-| onConfirm          | function | Event on Confirm button                          |         |
+| Prop               | Type     | Description                                                                 | Default |
+| ------------------ | -------- | --------------------------------------------------------------------------- | ------- |
+| minHour            | number   | Minimum of hour                                                             | 0       |
+| maxHour            | number   | Maximum of hour                                                             | 23      |
+| minMinute          | number   | Minimum of minute                                                           | 0       |
+| maxMinute          | number   | Maximum of minute                                                           | 59      |
+| hourInterval       | number   | The interval at which hours can be selected.                                | 1       |
+| minuteInterval     | number   | The interval at which minutes can be selected.                              | 1       |
+| hourUnit           | string   | Add extra text to hour (e.g. "hrs")                                         | ""      |
+| hourUnitSingular   | string   | The first hour's extra text, if not hourUnit (e.g. "1 hr" vs "2 hrs")       | ""      |
+| minuteUnit         | string   | Add extra text to minute (e.g. "mins")                                      | ""      |
+| minuteUnitSingular | string   | The first minute's extra text, if not minuteUnit (e.g. "1 min" vs "2 mins") | ""      |
+| selectedHour       | string   | Default hour                                                                | "0"     |
+| selectedMinute     | string   | Default minute                                                              | "00"    |
+| itemStyle          | object   | Item text style                                                             | {}      |
+| textCancel         | string   | Cancel button text                                                          | Cancel  |
+| textConfirm        | string   | Confirm button text                                                         | Confirm |
+| onCancel           | function | Event on Cancel button                                                      |         |
+| onConfirm          | function | Event on Confirm button                                                     |         |
 
 ## Methods
 

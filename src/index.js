@@ -54,16 +54,12 @@ class TimePicker extends Component {
     } = this.props;
     const interval = maxMinute / minuteInterval;
     for (let i = minMinute; i <= maxMinute; i = i + minuteInterval) {
-      const new_value = value < 10 ? `0${i}` : `${i}`;
+      const new_value = i < 10 ? `0${i}` : `${i}`;
       const unitLabel = minuteUnit
         ? ` ${i === 1 ? minuteUnitSingular || minuteUnit : minuteUnit}`
         : "";
       const item = (
-        <Picker.Item
-          key={value}
-          value={new_value}
-          label={new_value + unitLabel}
-        />
+        <Picker.Item key={i} value={new_value} label={new_value + unitLabel} />
       );
       items.push(item);
     }
