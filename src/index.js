@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, TouchableOpacity, Text, Picker } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
+import Picker from "@react-native-community/picker";
 import RBSheet from "react-native-raw-bottom-sheet";
 import styles from "./styles";
 
@@ -27,8 +28,11 @@ class TimePicker extends Component {
     const interval = maxHour / hourInterval;
     for (let i = 0; i <= interval; i++) {
       const value = `${i * hourInterval}`;
+      const unitLabel = hourUnit
+        ? ` ${i === 1 ? hourUnitSingular || hourUnit : hourUnit}`
+        : "";
       const item = (
-        <Picker.Item key={value} value={value} label={value + hourUnit} />
+        <Picker.Item key={value} value={value} label={value + unitLabel} />
       );
       items.push(item);
     }
@@ -42,11 +46,14 @@ class TimePicker extends Component {
     for (let i = 0; i <= interval; i++) {
       const value = i * minuteInterval;
       const new_value = value < 10 ? `0${value}` : `${value}`;
+      const unitLabel = minuteUnit
+        ? ` ${i === 1 ? minuteUnitSingular || minuteUnit : minuteUnit}`
+        : "";
       const item = (
         <Picker.Item
           key={value}
           value={new_value}
-          label={new_value + minuteUnit}
+          label={new_value + unitLabel}
         />
       );
       items.push(item);
@@ -104,7 +111,7 @@ class TimePicker extends Component {
           selectedValue={selectedHour}
           style={styles.picker}
           itemStyle={this.props.itemStyle}
-          onValueChange={itemValue =>
+          onValueChange={(itemValue) =>
             this.onValueChange(itemValue, selectedMinute)
           }
         >
@@ -115,7 +122,7 @@ class TimePicker extends Component {
           selectedValue={selectedMinute}
           style={styles.picker}
           itemStyle={this.props.itemStyle}
-          onValueChange={itemValue =>
+          onValueChange={(itemValue) =>
             this.onValueChange(selectedHour, itemValue)
           }
         >
@@ -128,7 +135,7 @@ class TimePicker extends Component {
   render() {
     return (
       <RBSheet
-        ref={ref => {
+        ref={(ref) => {
           this.RBSheet = ref;
         }}
       >
@@ -145,6 +152,7 @@ TimePicker.propTypes = {
   hourInterval: PropTypes.number,
   minuteInterval: PropTypes.number,
   hourUnit: PropTypes.string,
+  hourUnitSingular: PropTypes.string,
   minuteUnit: PropTypes.string,
   selectedHour: PropTypes.string,
   selectedMinute: PropTypes.string,
@@ -152,7 +160,7 @@ TimePicker.propTypes = {
   textCancel: PropTypes.string,
   textConfirm: PropTypes.string,
   onCancel: PropTypes.func,
-  onConfirm: PropTypes.func
+  onConfirm: PropTypes.func,
 };
 
 TimePicker.defaultProps = {
@@ -161,12 +169,14 @@ TimePicker.defaultProps = {
   hourInterval: 1,
   minuteInterval: 1,
   hourUnit: "",
+  hourUnitSingular: "",
   minuteUnit: "",
+  minuteUnitSingular: "",
   selectedHour: "0",
   selectedMinute: "00",
   itemStyle: {},
   textCancel: "Cancel",
-  textConfirm: "Done"
+  textConfirm: "Done",
 };
 
 export default TimePicker;

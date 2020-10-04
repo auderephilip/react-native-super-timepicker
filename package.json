@@ -12,11 +12,12 @@
     "url": "git+https://github.com/auderephilip/react-native-super-timepicker.git"
   },
   "keywords": [
-    "react-native",
-    "24 hour format",
-    "twenty four hour format",
+    "react native",
+    "24 hour",
+    "twenty four hour",
     "time picker ios",
-    "number picker ios"
+    "number picker ios",
+    "time picker"
   ],
   "author": "Philip Su",
   "license": "MIT",
@@ -25,7 +26,8 @@
   },
   "homepage": "https://github.com/auderephilip/react-native-super-timepicker#readme",
   "dependencies": {
-    "react-native-raw-bottom-sheet": "^1.0.0"
+    "@react-native-community/picker": "^1.8.0",
+    "react-native-raw-bottom-sheet": "^1.1.4"
   },
   "devDependencies": {
     "prop-types": "^15.7.2"
