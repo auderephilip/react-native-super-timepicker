@@ -7,7 +7,9 @@ declare module "react-native-super-timepicker" {
     hourInterval?: number;
     minuteInterval?: number;
     hourUnit?: string;
+    hourUnitSingular?: string;
     minuteUnit?: string;
+    minuteUnitSingular?: string;
     selectedHour?: string;
     selectedMinute?: string;
     itemStyle: object;

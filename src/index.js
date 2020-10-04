@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { View, TouchableOpacity, Text } from "react-native";
-import Picker from "@react-native-community/picker";
+import { View, TouchableOpacity, Text, Picker } from "react-native";
 import RBSheet from "react-native-raw-bottom-sheet";
 import styles from "./styles";
 
@@ -12,19 +11,19 @@ class TimePicker extends Component {
     this.state = { selectedHour, selectedMinute };
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { selectedHour, selectedMinute } = nextProps;
-    if (
-      selectedHour !== this.state.selectedHour ||
-      selectedMinute !== this.state.selectedMinute
-    ) {
-      this.setState({ selectedHour, selectedMinute });
+  componentDidUpdate(prevProps) {
+    const { selectedHour, selectedMinute } = prevProps;
+    if (selectedHour !== this.props.selectedHour) {
+      this.setState({ selectedHour: this.props.selectedHour });
+    }
+    if (selectedMinute !== this.props.selectedMinute) {
+      this.setState({ selectedMinute: this.props.selectedMinute });
     }
   }
 
   getHourItems = () => {
     const items = [];
-    const { maxHour, hourInterval, hourUnit } = this.props;
+    const { maxHour, hourInterval, hourUnit, hourUnitSingular } = this.props;
     const interval = maxHour / hourInterval;
     for (let i = 0; i <= interval; i++) {
       const value = `${i * hourInterval}`;
@@ -41,7 +40,12 @@ class TimePicker extends Component {
 
   getMinuteItems = () => {
     const items = [];
-    const { maxMinute, minuteInterval, minuteUnit } = this.props;
+    const {
+      maxMinute,
+      minuteInterval,
+      minuteUnit,
+      minuteUnitSingular,
+    } = this.props;
     const interval = maxMinute / minuteInterval;
     for (let i = 0; i <= interval; i++) {
       const value = i * minuteInterval;
