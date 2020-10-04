@@ -33,7 +33,7 @@ class TimePicker extends Component {
     for (let i = minHour; i <= maxHour; i = i + hourInterval) {
       const value = `${i}`;
       const unitLabel = hourUnit
-        ? ` ${i === 1 ? hourUnitSingular || hourUnit : hourUnit}`
+        ? `${i === 1 ? hourUnitSingular || hourUnit : hourUnit}`
         : "";
       const item = (
         <Picker.Item key={value} value={value} label={value + unitLabel} />
@@ -52,11 +52,10 @@ class TimePicker extends Component {
       minuteUnit,
       minuteUnitSingular,
     } = this.props;
-    const interval = maxMinute / minuteInterval;
     for (let i = minMinute; i <= maxMinute; i = i + minuteInterval) {
       const new_value = i < 10 ? `0${i}` : `${i}`;
       const unitLabel = minuteUnit
-        ? ` ${i === 1 ? minuteUnitSingular || minuteUnit : minuteUnit}`
+        ? `${i === 1 ? minuteUnitSingular || minuteUnit : minuteUnit}`
         : "";
       const item = (
         <Picker.Item key={i} value={new_value} label={new_value + unitLabel} />

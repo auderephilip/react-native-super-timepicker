@@ -8,8 +8,8 @@
 A 24-hour format time picker which improves on [react-native-24h-timepicker](https://www.npmjs.com/package/react-native-24h-timepicker) by:
 
 - supporting `minHour` and `maxHour` (contribution by [mindmind](https://github.com/mindmind))
-- putting a space gap between the number and the label (e.g. "24 mins" instead of "24mins")
 - removing deprecated stuff like `componentWillReceiveProps`
+- updated dependencies to the latest stuff
 
 ### Screenshot
 
@@ -105,25 +105,25 @@ export default Example;
 
 ## Props
 
-| Prop               | Type     | Description                                                                 | Default |
-| ------------------ | -------- | --------------------------------------------------------------------------- | ------- |
-| minHour            | number   | Minimum of hour                                                             | 0       |
-| maxHour            | number   | Maximum of hour                                                             | 23      |
-| minMinute          | number   | Minimum of minute                                                           | 0       |
-| maxMinute          | number   | Maximum of minute                                                           | 59      |
-| hourInterval       | number   | The interval at which hours can be selected.                                | 1       |
-| minuteInterval     | number   | The interval at which minutes can be selected.                              | 1       |
-| hourUnit           | string   | Add extra text to hour (e.g. "hrs")                                         | ""      |
-| hourUnitSingular   | string   | The first hour's extra text, if not hourUnit (e.g. "1 hr" vs "2 hrs")       | ""      |
-| minuteUnit         | string   | Add extra text to minute (e.g. "mins")                                      | ""      |
-| minuteUnitSingular | string   | The first minute's extra text, if not minuteUnit (e.g. "1 min" vs "2 mins") | ""      |
-| selectedHour       | string   | Default hour                                                                | "0"     |
-| selectedMinute     | string   | Default minute                                                              | "00"    |
-| itemStyle          | object   | Item text style                                                             | {}      |
-| textCancel         | string   | Cancel button text                                                          | Cancel  |
-| textConfirm        | string   | Confirm button text                                                         | Confirm |
-| onCancel           | function | Event on Cancel button                                                      |         |
-| onConfirm          | function | Event on Confirm button                                                     |         |
+| Prop               | Type     | Description                                                                                                                           | Default |
+| ------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| minHour            | number   | Minimum of hour                                                                                                                       | 0       |
+| maxHour            | number   | Maximum of hour                                                                                                                       | 23      |
+| minMinute          | number   | Minimum of minute                                                                                                                     | 0       |
+| maxMinute          | number   | Maximum of minute                                                                                                                     | 59      |
+| hourInterval       | number   | The interval at which hours can be selected.                                                                                          | 1       |
+| minuteInterval     | number   | The interval at which minutes can be selected.                                                                                        | 1       |
+| hourUnit           | string   | Add extra text to hour (e.g. "hrs"). Include a space if you want a gap between the number and the text (e.g. " hrs" for "18 hrs")     | ""      |
+| hourUnitSingular   | string   | The first hour's extra text, if not hourUnit (e.g. "1 hr" vs "2 hrs")                                                                 | ""      |
+| minuteUnit         | string   | Add extra text to minute (e.g. "mins"). Include a space if you want a gap between the number and the text (e.g. " mins" for "4 mins") | ""      |
+| minuteUnitSingular | string   | The first minute's extra text, if not minuteUnit (e.g. "1 min" vs "2 mins")                                                           | ""      |
+| selectedHour       | string   | Default hour                                                                                                                          | "0"     |
+| selectedMinute     | string   | Default minute                                                                                                                        | "00"    |
+| itemStyle          | object   | Item text style                                                                                                                       | {}      |
+| textCancel         | string   | Cancel button text                                                                                                                    | Cancel  |
+| textConfirm        | string   | Confirm button text                                                                                                                   | Confirm |
+| onCancel           | function | Event on Cancel button                                                                                                                |         |
+| onConfirm          | function | Event on Confirm button                                                                                                               |         |
 
 ## Methods
 
