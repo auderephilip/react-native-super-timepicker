@@ -7,33 +7,33 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
     flexDirection: "row",
     justifyContent: "space-between",
-    alignItems: "center"
+    alignItems: "center",
   },
   buttonAction: {
     height: "100%",
     paddingHorizontal: 20,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   buttonText: {
     fontSize: 20,
     color: "#006BFF",
-    fontWeight: "500"
+    fontWeight: "500",
   },
   buttonTextCancel: {
     color: "#666",
-    fontWeight: "400"
+    fontWeight: "400",
   },
   body: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   picker: {
-    flex: 1
+    flex: 1,
   },
   separator: {
     alignSelf: "center",
-    fontSize: 16
-  }
+    fontSize: 16,
+  },
 });
 
 export default styles;

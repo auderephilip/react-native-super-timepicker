@@ -5,7 +5,7 @@
 
 ### Screenshot
 
-![screenshot](https://raw.githubusercontent.com/auderephilip/stock-images/master/react-native-super-timepicker/RN24TPK-IOS.gif)
+![screenshot](https://user-images.githubusercontent.com/42978089/95019985-60a24e80-061d-11eb-9fad-fb9d437ca7b0.gif)
 
 ## Installation
 
@@ -97,21 +97,23 @@ export default Example;
 
 ## Props
 
-| Prop           | Type     | Description                                    | Default |
-| -------------- | -------- | ---------------------------------------------- | ------- |
-| maxHour        | number   | Maximum of hour                                | 23      |
-| maxMinute      | number   | Maximum of minute                              | 59      |
-| hourInterval   | number   | The interval at which hours can be selected.   | 1       |
-| minuteInterval | number   | The interval at which minutes can be selected. | 1       |
-| hourUnit       | string   | Add extra text to hour                         | ""      |
-| minuteUnit     | string   | Add extra text to minute                       | ""      |
-| selectedHour   | string   | Default hour                                   | "0"     |
-| selectedMinute | string   | Default minute                                 | "00"    |
-| itemStyle      | object   | Item text style                                | {}      |
-| textCancel     | string   | Cancel button text                             | Cancel  |
-| textConfirm    | string   | Confirm button text                            | Confirm |
-| onCancel       | function | Event on Cancel button                         |         |
-| onConfirm      | function | Event on Confirm button                        |         |
+| Prop               | Type     | Description                                      | Default |
+| ------------------ | -------- | ------------------------------------------------ | ------- |
+| maxHour            | number   | Maximum of hour                                  | 23      |
+| maxMinute          | number   | Maximum of minute                                | 59      |
+| hourInterval       | number   | The interval at which hours can be selected.     | 1       |
+| minuteInterval     | number   | The interval at which minutes can be selected.   | 1       |
+| hourUnit           | string   | Add extra text to hour                           | ""      |
+| hourUnitSingular   | string   | The first hour's extra text, if not hourUnit     | ""      |
+| minuteUnit         | string   | Add extra text to minute                         | ""      |
+| minuteUnitSingular | string   | The first minute's extra text, if not minuteUnit | ""      |
+| selectedHour       | string   | Default hour                                     | "0"     |
+| selectedMinute     | string   | Default minute                                   | "00"    |
+| itemStyle          | object   | Item text style                                  | {}      |
+| textCancel         | string   | Cancel button text                               | Cancel  |
+| textConfirm        | string   | Confirm button text                              | Confirm |
+| onCancel           | function | Event on Cancel button                           |         |
+| onConfirm          | function | Event on Confirm button                          |         |
 
 ## Methods
 
@@ -130,4 +132,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Author
 
-Made by [Philip Su](https://github.com/auderephilip).
+Made by [Philip Su](https://github.com/auderephilip), with thanks to original
+author NYSamnang. Repo was forked to provide more active maintenance and to
+accept others' pull requests.
