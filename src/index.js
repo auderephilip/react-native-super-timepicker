@@ -23,10 +23,15 @@ class TimePicker extends Component {
 
   getHourItems = () => {
     const items = [];
-    const { maxHour, hourInterval, hourUnit, hourUnitSingular } = this.props;
-    const interval = maxHour / hourInterval;
-    for (let i = 0; i <= interval; i++) {
-      const value = `${i * hourInterval}`;
+    const {
+      minHour,
+      maxHour,
+      hourInterval,
+      hourUnit,
+      hourUnitSingular,
+    } = this.props;
+    for (let i = minHour; i <= maxHour; i = i + hourInterval) {
+      const value = `${i}`;
       const unitLabel = hourUnit
         ? ` ${i === 1 ? hourUnitSingular || hourUnit : hourUnit}`
         : "";
@@ -41,24 +46,20 @@ class TimePicker extends Component {
   getMinuteItems = () => {
     const items = [];
     const {
+      minMinute,
       maxMinute,
       minuteInterval,
       minuteUnit,
       minuteUnitSingular,
     } = this.props;
     const interval = maxMinute / minuteInterval;
-    for (let i = 0; i <= interval; i++) {
-      const value = i * minuteInterval;
-      const new_value = value < 10 ? `0${value}` : `${value}`;
+    for (let i = minMinute; i <= maxMinute; i = i + minuteInterval) {
+      const new_value = i < 10 ? `0${i}` : `${i}`;
       const unitLabel = minuteUnit
         ? ` ${i === 1 ? minuteUnitSingular || minuteUnit : minuteUnit}`
         : "";
       const item = (
-        <Picker.Item
-          key={value}
-          value={new_value}
-          label={new_value + unitLabel}
-        />
+        <Picker.Item key={i} value={new_value} label={new_value + unitLabel} />
       );
       items.push(item);
     }
@@ -151,7 +152,9 @@ class TimePicker extends Component {
 }
 
 TimePicker.propTypes = {
+  minHour: PropTypes.number,
   maxHour: PropTypes.number,
+  minMinute: PropTypes.number,
   maxMinute: PropTypes.number,
   hourInterval: PropTypes.number,
   minuteInterval: PropTypes.number,
@@ -168,7 +171,9 @@ TimePicker.propTypes = {
 };
 
 TimePicker.defaultProps = {
+  minHour: 0,
   maxHour: 23,
+  minMinute: 0,
   maxMinute: 59,
   hourInterval: 1,
   minuteInterval: 1,
