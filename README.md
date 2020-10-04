@@ -1,11 +1,11 @@
-# react-native-24h-timepicker
+# react-native-super-timepicker
 
-[![npm version](https://badge.fury.io/js/react-native-24h-timepicker.svg)](//npmjs.com/package/react-native-24h-timepicker) [![npm downloads](https://img.shields.io/npm/dm/react-native-24h-timepicker.svg)
-](//npmjs.com/package/react-native-24h-timepicker)
+[![npm version](https://badge.fury.io/js/react-native-super-timepicker.svg)](//npmjs.com/package/react-native-super-timepicker) [![npm downloads](https://img.shields.io/npm/dm/react-native-super-timepicker.svg)
+](//npmjs.com/package/react-native-super-timepicker)
 
 ### Screenshot
 
-![screenshot](https://raw.githubusercontent.com/NYSamnang/stock-images/master/react-native-24h-timepicker/RN24TPK-IOS.gif)
+![screenshot](https://raw.githubusercontent.com/auderephilip/stock-images/master/react-native-super-timepicker/RN24TPK-IOS.gif)
 
 ## Installation
 
@@ -30,7 +30,7 @@ class Example extends Component {
   constructor() {
     super();
     this.state = {
-      time: ""
+      time: "",
     };
   }
 
@@ -56,7 +56,7 @@ class Example extends Component {
         </TouchableOpacity>
         <Text style={styles.text}>{this.state.time}</Text>
         <TimePicker
-          ref={ref => {
+          ref={(ref) => {
             this.TimePicker = ref;
           }}
           onCancel={() => this.onCancel()}
@@ -72,24 +72,24 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     backgroundColor: "#fff",
-    paddingTop: 100
+    paddingTop: 100,
   },
   text: {
     fontSize: 20,
-    marginTop: 10
+    marginTop: 10,
   },
   button: {
     backgroundColor: "#4EB151",
     paddingVertical: 11,
     paddingHorizontal: 17,
     borderRadius: 3,
-    marginVertical: 50
+    marginVertical: 50,
   },
   buttonText: {
     color: "#FFFFFF",
     fontSize: 16,
-    fontWeight: "600"
-  }
+    fontWeight: "600",
+  },
 });
 
 export default Example;

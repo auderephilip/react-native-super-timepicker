@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { StyleProp, ViewStyle } from "react-native";
 
-declare module "react-native-24h-timepicker" {
+declare module "react-native-super-timepicker" {
   export type TimePickerProps = {
     maxHour?: number;
     maxMinute?: number;
